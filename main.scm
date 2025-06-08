@@ -2,9 +2,9 @@
   (lambda (x)
     (+ x 1)))
 
-(define sub1
-  (lambda (x)
-    (- x 1)))
+(define
+  (sub1 x)
+  (- x 1))
 
 (display (add1 5))
 (newline)
@@ -44,3 +44,25 @@
   (+ (- 10 7)
     6)))
 (newline)
+
+
+(define (facc acc n) 
+  (cond ((= n 1) acc)
+         (#t (facc (* acc n) (- n 1)))
+  )
+)
+
+(define (fac n) (facc 1 n))
+
+(display (fac 6))
+(newline)
+
+
+(display (+ 3 5 6))
+(newline)
+
+(display (/ 12847 123))
+(newline)
+
+
+
